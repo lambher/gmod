@@ -5,7 +5,7 @@
 -- Time: 12:09 AM
 --
 
-print("refresh")
+print("starting gmod script")
 
 local function playDeathSound(location)
     sound.Play( "sound/aaaahh.wav", location)
