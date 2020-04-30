@@ -9,7 +9,7 @@ print("starting gmod script")
 
 function playDeathSound(location)
     print(location)
-    sound.Play( "sound/aaaahh.wav", location)
+    sound.Play( "sound/death.wav", location)
 end
 
 --hook.Add("PlayerDeath", "MyFirstScript", function(victim, inflictor, attacker)
