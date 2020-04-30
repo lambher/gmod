@@ -7,13 +7,18 @@
 
 print("starting gmod script")
 
-local function playDeathSound(location)
+function playDeathSound(location)
+    print(location)
     sound.Play( "sound/aaaahh.wav", location)
 end
 
-hook.Add("PlayerDeath", "MyFirstScript", function(victim, inflictor, attacker)
-    print("test")
+--hook.Add("PlayerDeath", "MyFirstScript", function(victim, inflictor, attacker)
+--    print(victim, inflictor, attacker)
+--    playDeathSound(victim:GetViewModel():GetPos())
+--end)
+
+hook.Add("PlayerSay", "MyFirstScript", function(sender, text, teamChat)
     print(victim, inflictor, attacker)
-    playDeathSound(victim:GetLocation())
+    playDeathSound(sender:GetViewModel():GetPos())
 end)
 
