@@ -14,6 +14,6 @@ end
 hook.Add("PlayerDeath", "MyFirstScript", function(victim, inflictor, attacker)
     print("test")
     print(victim, inflictor, attacker)
-    playDeathSound(victim:GetEntityInUse():GetPos())
+    playDeathSound(victim:GetLocation())
 end)
 
