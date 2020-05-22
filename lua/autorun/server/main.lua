@@ -19,6 +19,7 @@ end
 
 hook.Add("PlayerSay", "MyFirstScript", function(sender, text, teamChat)
     print(victim, inflictor, attacker)
+    print("test")
     playDeathSound(sender:GetViewModel():GetPos())
 end)
 
